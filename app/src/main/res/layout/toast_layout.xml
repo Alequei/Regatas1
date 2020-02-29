@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/circle1"
+    android:layout_gravity="center"
+    android:id="@+id/toast_root">
+
+    <TextView
+        android:id="@+id/toast_registrado"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comida Registrada"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/toast_correcto"
+        android:layout_marginTop="-5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correctamente"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/toast_image"
+        android:layout_marginTop="-25dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/check"/>
+
+</LinearLayout>

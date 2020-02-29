@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="main_logo_height">280dp</dimen>
+    <dimen name="main_button_width">190dp</dimen>
+    <dimen name="main_button_height">190dp</dimen>
+    <dimen name="main_text_registrar">40sp</dimen>
+    <dimen name="main_text_entrada">40sp</dimen>
+    <dimen name="main_text_salida">40sp</dimen>
+
+    <dimen name="register_entrada_foto_width">300dp</dimen>
+    <dimen name="register_entrada_foto_height">500dp</dimen>
+    <dimen name="register_button_width">290dp</dimen>
+    <dimen name="register_button_height">70dp</dimen>
+    <dimen name="register_dni_Editext_width">500dp</dimen>
+    <dimen name="register_dni_Editext_height">100dp</dimen>
+    <dimen name="register_button_regitrar_width">500dp</dimen>
+    <dimen name="register_button_registrar_height">100dp</dimen>
+    <dimen name="register_text_foto_button">32sp</dimen>
+    <dimen name="register_text_hint_dni">50sp</dimen>
+    <dimen name="register_text_button_registar">50sp</dimen>
+
+
+
+</resources>

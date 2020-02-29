@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Control de Comidas</string>
+    <string name="main_activity_register">DESAYUNO</string>
+    <string name="main_activity_entrada">Registrar</string>
+
+    <string-array name="android_layout_arrays">
+        <item>-- Selecione --</item>
+        <item>Salida Final</item>
+        <item>Comision</item>
+        <item>Permiso</item>
+        <item>Compensacion de Horas</item>
+        <item>Almuerzo</item>
+
+    </string-array>
+</resources>
