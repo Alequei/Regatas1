@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
     private Button registerEButton;
     private Button registerSButton;
     private Button registerCButton;
-    String dateString;
-    Integer hora1;
-    String hora2;
-    String hora3;
+
+    int horastimada1,horaestimada2;
+    int diferenciaHD,diferenciaHA,diferenciaHC;
+    int diferenciaMD,diferenciMA,diferenciaMC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,28 +29,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Calendar c1 = Calendar.getInstance();
         final int horaActual;
+
         horaActual =c1.get(Calendar.HOUR_OF_DAY);
-        registerSButton = findViewById(R.id.salida_Butt);
-        registerSButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(horaActual<12){
-                    goSalida();
-
-                } else{
-                    Toast.makeText(MainActivity.this,"Se avilitara a partir de las 8 Am hasta las 12 Pm", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
+        horastimada1=c1.get(Calendar.MINUTE);
+        horaestimada2=c1.get(Calendar.SECOND);
+        diferenciaHD = 31-horaActual;
+        diferenciaHA =36-horaActual;
+        diferenciaHC=19-horaActual;
+        diferenciaMD=60 - horastimada1;
         registerEButton = findViewById(R.id.ingreso_Butt);
         registerEButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (horaActual>12){
+                if(horaActual>7 && horaActual<10){
+                    goSalida();
+
+                } else if(horaActual>11){
+                    Toast.makeText(MainActivity.this,"Desayuno Inavilitado"+"  Falta  "+diferenciaHD+"h :"
+                            +diferenciaMD+" minutos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        registerSButton = findViewById(R.id.salida_Butt);
+        registerSButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (horaActual>=12 && horaActual<=16){
                     goRegister();
-                }else{
-                    Toast.makeText(MainActivity.this,"Se avilitara a partir de las 12 Am hasta las 5 Pm", Toast.LENGTH_SHORT).show();
+                }else if (horaActual<=17){
+                    Toast.makeText(MainActivity.this,"Almuerzo inavilitado"+"  Falta  "+diferenciaHA+"h :"
+                            +diferenciaMD+" minutos", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -60,10 +69,11 @@ public class MainActivity extends AppCompatActivity {
         registerCButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (horaActual>19){
+                if (horaActual>=19 && horaActual>=21){
                     ceRegister();
-                }else{
-                    Toast.makeText(MainActivity.this,"Se avilitara a partir de las 7 Am hasta las 10 Pm", Toast.LENGTH_SHORT).show();
+                }else if(horaActual<22){
+                    Toast.makeText(MainActivity.this,"Cena inavilitado"+"  Falta  "+diferenciaHC+"h :"
+                            +diferenciaMD+"  minutos", Toast.LENGTH_SHORT).show();
                 }
             }
         });

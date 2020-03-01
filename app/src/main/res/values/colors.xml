@@ -15,5 +15,6 @@
     <color name="colors_textButton_red">#C62828</color>
     <color name="colors_background_butoon_phot_red">#FFCDD2</color>
     <color name="color_desayuno">#ECEFF1</color>
+    <color name="colorBlue">#FFC107</color>
     <!--76617286-->
 </resources>
